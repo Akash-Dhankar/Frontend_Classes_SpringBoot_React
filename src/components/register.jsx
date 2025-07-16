@@ -34,7 +34,7 @@ const Register = () => {
   const handleRegister = async (event) => {
     event.preventDefault();
     try {
-      await axios.post("https://spring-boot-application2-latest.onrender.com/api/auth/register", formData);
+      await axios.post("https://ems-latest-1.onrender.com/api/auth/register", formData);
       alert("Registration Successful");
     } catch (e) {
       alert("Registration Failed");

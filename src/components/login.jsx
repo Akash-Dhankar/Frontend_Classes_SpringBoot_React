@@ -9,7 +9,7 @@ const Login = () => {
   async function handleLogin(event) {
   event.preventDefault();
   try {
-    const response = await axios.post("https://spring-boot-application2-latest.onrender.com/api/auth/login", { userName, password });
+    const response = await axios.post("https://ems-latest-1.onrender.com/api/auth/login", { userName, password });
     console.log(response.data);
 
     localStorage.setItem("token", response.data.token);
