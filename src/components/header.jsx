@@ -31,7 +31,7 @@ const Header = () => {
               <Link className="nav-link" to="/employees">Employees</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/add">Add</Link>
+              <Link to="/add-task" className="btn btn-success">Add Task</Link>
             </li>
             {!isLoggedIn && (
               <>

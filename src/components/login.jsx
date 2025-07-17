@@ -1,10 +1,13 @@
 import { useState } from "react";
 import axios from "axios"; 
 import Header from '../components/header'
+import { useNavigate } from "react-router-dom";
+
 
 const Login = () => {
   const [userName, setUserName] = useState("");
   const [password, setPassword] = useState("");
+  const navigate = useNavigate();
 
   async function handleLogin(event) {
   event.preventDefault();
@@ -13,8 +16,10 @@ const Login = () => {
     console.log(response.data);
 
     localStorage.setItem("token", response.data.token);
+    localStorage.setItem("empId", response.data.empId);
 
     alert("Login Successful");
+    navigate("/dashboard"); 
   } catch (e) {
     console.log("Login Error", e);
     alert("Invalid Credentials");
