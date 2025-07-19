@@ -23,7 +23,7 @@ const AddTask = () => {
     }
   const navigate = useNavigate();
 
-  const handleChange = (e) => {                             //---------------23IT003--------------------
+  const handleChange = (e) => {                            
     const { name, value } = e.target;
     setTodo((prev) => ({ ...prev, [name]: value }));
   };
@@ -38,7 +38,7 @@ const AddTask = () => {
         {
           headers: { Authorization: `Bearer ${token}` }
         }
-      );
+      );                                             
       alert("Task added!");
       navigate("/dashboard"); 
     } catch (err) {
